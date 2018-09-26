@@ -4,11 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import KHeader from './components/com/KHeader'
+import api from './api'
 require('./assets/lib/kevent/js/kevent')
 
 Vue.config.productionTip = false
 
 Vue.prototype.$addEvent = window.addEvent
+
+Vue.prototype.$api = api
 
 Vue.component('KHeader', KHeader)
 

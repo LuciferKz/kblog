@@ -8,7 +8,6 @@
             <section class="section-third"></section>
         </section>
         <footer id="footer">
-
         </footer>
     </section>
 </template>
@@ -20,6 +19,12 @@ export default {
     return {
       logo: 'logo'
     }
+  },
+  mounted () {
+    console.log(this.$api.articles)
+    this.$api.articles.all().then((res) => {
+      console.log(res)
+    })
   }
 }
 </script>

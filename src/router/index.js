@@ -9,11 +9,11 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: (resolve) => require(['@/components/Index'], resolve),
-      children: [{
-        name: 'Blog',
-        path: '/blog',
-        component: (resolve) => require(['@/components/Blog'], resolve)
-      }]
+      children: []
+    }, {
+      name: 'Blog',
+      path: '/blog',
+      component: (resolve) => require(['@/components/Blog'], resolve)
     }
   ]
 })
