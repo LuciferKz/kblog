@@ -1,0 +1,19 @@
+.slide-ver-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-ver-fade-leave-active {
+  transition: all .3s ease;
+}
+.slide-ver-fade-enter, .slide-ver-fade-leave-to {
+  transform: translateY(-100%);
+}
+
+.slide-hor-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-hor-fade-leave-active {
+  transition: all .3s ease;
+}
+.slide-hor-fade-enter, .slide-hor-fade-leave-to {
+  transform: translateX(-100%);
+}

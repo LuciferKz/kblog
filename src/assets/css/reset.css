@@ -1,0 +1,9 @@
+html, body { height: 100%; background-color: #ececec; }
+body { margin: 0; }
+a { text-decoration: none; color: inherit; }
+#app { font-family: 'CaviarDreams', 'Arial', '微软雅黑', '黑体'; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url('../font/CaviarDreams.ttf');
+}
