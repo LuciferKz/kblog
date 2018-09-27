@@ -12,7 +12,7 @@
         <nav id="main-nav">
           <transition name="slide-hor-fade">
             <section class="main-nav" v-show="showNav">
-              <router-link to="blog">Blog</router-link>
+              <router-link :to="{ name: 'Blog' }">Blog</router-link>
               <router-link to="blog">Profile</router-link>
               <router-link to="blog">Contact</router-link>
             </section>

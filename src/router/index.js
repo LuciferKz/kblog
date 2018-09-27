@@ -14,6 +14,10 @@ export default new Router({
       name: 'Blog',
       path: '/blog',
       component: (resolve) => require(['@/components/Blog'], resolve)
+    }, {
+      name: 'Detail',
+      path: '/detail/:aid',
+      component: (resolve) => require(['@/components/Detail'], resolve)
     }
   ]
 })

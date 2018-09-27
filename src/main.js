@@ -13,6 +13,10 @@ Vue.prototype.$addEvent = window.addEvent
 
 Vue.prototype.$api = api
 
+Vue.filter('formatDate', function (date) {
+  return date.split('.')[0].replace('T', ' ')
+})
+
 Vue.component('KHeader', KHeader)
 
 /* eslint-disable no-new */

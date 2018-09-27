@@ -7,6 +7,9 @@ let $http = axios.create({
 let articles = {
   all () {
     return $http.get('/article/all')
+  },
+  getById (id) {
+    return $http.get('/article/' + id)
   }
 }
 

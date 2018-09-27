@@ -1,16 +1,10 @@
 <template>
-    <section id="wrap">
-        <KHeader></KHeader>
-        <section class="content">
-            <section class="ability-diagram"></section>
-            <section class="section-first"></section>
-            <section class="section-second"></section>
-            <section class="section-third"></section>
-        </section>
-        <footer id="footer">
-
-        </footer>
-    </section>
+  <section class="content">
+      <section class="ability-diagram"></section>
+      <section class="section-first"></section>
+      <section class="section-second"></section>
+      <section class="section-third"></section>
+  </section>
 </template>
 
 <script>
