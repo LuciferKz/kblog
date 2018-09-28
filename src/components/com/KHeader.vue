@@ -58,11 +58,13 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
     width: 100%;
     height: 60px;
     border-bottom: 1px solid #eff1f2;
   }
   .header {
+    position: relative;
     display: flex;
     height: 60px;
     margin: 0 20px;
@@ -70,26 +72,29 @@ export default {
   }
 
   .logo {
-    width: 100px;
+    flex: 0 1 100px;
+    min-width: 60px;
     background: url('../../assets/img/logo.png') no-repeat center center;
-    background-size: 100px auto;
-    margin: 0 30px 0 40px;
+    background-size: 100% auto;
+    margin-left: 10px;
   }
 
   #main-nav {
     overflow: hidden;
     display: flex;
     flex: 1;
+    min-width: 250px;
   }
 
   .main-nav {
     display: flex;
+    flex: 1;
   }
 
   .main-nav a {
     position: relative;
-    width: 100px;
-    padding: 0 20px;
+    flex: 1;
+    padding: 0 10px;
     text-align: center;
     line-height: 60px;
     letter-spacing: 2px;
@@ -137,6 +142,7 @@ export default {
   .btn-toggle-nav-box {
     display: flex;
     align-items: center;
+    margin-left: 10px;
     padding: 0 10px;
     border-right: 1px solid #eff1f2;
     border-left: 1px solid #eff1f2;

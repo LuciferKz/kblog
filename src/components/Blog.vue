@@ -5,27 +5,29 @@
         <router-link tag="li" :to="{ name:'Detail', params: { aid: article._id } }" v-for="article in articles" :key="article._id" @click="goDetail">
           <h2 class="title">{{ article.title }}</h2>
           <p class="date">{{ article.meta.createAt | formatDate }}</p>
-          <!-- <section>
-            <article v-html="article.content"></article>
-          </section> -->
         </router-link>
       </ul>
+    </section>
+    <section class="side-container">
+      <k-side></k-side>
     </section>
   </section>
 </template>
 
 <script>
+import KSide from './com/KSide'
+
 export default {
   name: 'Index',
+  components: { KSide },
   data () {
     return {
       logo: 'logo',
-      articles: []
+      articles: [],
     }
   },
   mounted () {
     this.$api.articles.all().then((res) => {
-      console.log(res)
       this.articles = res.data.articles
     })
   },
@@ -39,7 +41,7 @@ export default {
 
 <style scoped>
   .blogs {
-    padding: 20px 0;
+    flex: 1;
   }
 
   .blog-ul li {
@@ -54,6 +56,12 @@ export default {
   .blog-ul li .date {
     padding-bottom: 20px;
     font-size: 14px;
+  }
+
+  .side-container {
+    width: 200px;
+    padding: 10px 10px 10px 20px;
+    border-left: 1px solid #eff1f2;
   }
 
 </style>

@@ -11,6 +11,7 @@
 <script>
 import '@/assets/css/reset.css'
 import '@/assets/css/transition.css'
+import '@/assets/css/mobile.css'
 
 export default {
   name: 'App'
@@ -28,8 +29,10 @@ export default {
   margin: 0 20px;
 }
 .content {
+  display: flex;
   min-height: 100%;
   margin: 70px 0 20px;
+  padding: 20px;
   background-color: #FFF;
 }
 </style>
