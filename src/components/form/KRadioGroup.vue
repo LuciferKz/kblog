@@ -17,7 +17,7 @@ export default {
   components: { KRadio },
   props: {
     options: Array,
-    value: Array
+    value: String
   },
   data () {
     return {

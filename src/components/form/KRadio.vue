@@ -13,7 +13,7 @@ export default {
   name: 'KRadio',
   props: {
     data: Object,
-    value: Array
+    value: String
   },
   data () {
     return {

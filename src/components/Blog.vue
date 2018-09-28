@@ -22,14 +22,20 @@ export default {
   components: { KSide },
   data () {
     return {
-      logo: 'logo',
-      articles: [],
+      logo: 'logo'
     }
   },
   mounted () {
     this.$api.articles.all().then((res) => {
-      this.articles = res.data.articles
+      this.$store.commit('filterArticles', res.data.articles)
+      return res
     })
+  },
+  computed: {
+    articles () {
+      console.log(this.$store.state.articles)
+      return this.$store.state.articles
+    }
   },
   methods: {
     goDetail () {

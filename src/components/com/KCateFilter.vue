@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       categories: [],
-      checkedOption: []
+      checkedOption: null
     }
   },
   mounted () {
@@ -25,6 +25,19 @@ export default {
         }
       })
     })
+  },
+  watch: {
+    checkedOption (val) {
+      this.$api.articles.fetch({
+        query: {
+          categoryId: val
+        }
+      }).then((res) => {
+        console.log(res)
+        this.$store.commit('filterArticles', res.data.articles)
+        return res
+      })
+    }
   }
 }
 </script>
